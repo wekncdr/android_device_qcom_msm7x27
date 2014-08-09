@@ -39,6 +39,7 @@ BOARD_EGL_CFG                           := device/qcom/msm7x27/egl.cfg
 BOARD_EGL_NEEDS_LEGACY_FB               := true
 BOARD_EGL_WORKAROUND_BUG_10194508       := true
 BOARD_USE_MHEAP_SCREENSHOT              := true
+HWUI_COMPILE_FOR_PERF                   := true
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE                := true
