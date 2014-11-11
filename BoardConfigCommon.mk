@@ -22,6 +22,7 @@ TARGET_ARCH_VARIANT    := armv6-vfp
 TARGET_BOARD_PLATFORM  := msm7x27
 TARGET_CPU_ABI         := armeabi
 TARGET_CPU_ABI2        := armeabi-v6l
+TARGET_CPU_SMP         := false
 TARGET_CPU_VARIANT     := arm11
 TARGET_NO_BOOTLOADER   := true
 TARGET_NO_RADIOIMAGE   := true
