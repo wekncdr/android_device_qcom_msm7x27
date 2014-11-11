@@ -31,10 +31,12 @@ COMMON_GLOBAL_CFLAGS   += -DTARGET_MSM7x27
 # For assembly error
 #COMMON_GLOBAL_CFLAGS   += --save-temps
 
+# malloc implementation
+MALLOC_IMPL            := dlmalloc
+
 # Graphics
 USE_OPENGL_RENDERER                     := true
 TARGET_NO_HW_OVERLAY                    := true
-TARGET_QCOM_DISPLAY_VARIANT             := legacy
 BOARD_ADRENO_DECIDE_TEXTURE_TARGET      := true
 BOARD_EGL_CFG                           := device/qcom/msm7x27/egl.cfg
 BOARD_EGL_NEEDS_LEGACY_FB               := true
@@ -45,13 +47,9 @@ HWUI_COMPILE_FOR_PERF                   := true
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE                := true
 BOARD_USES_QCOM_LIBS                    := true
-COMMON_GLOBAL_CFLAGS                    += -DQCOM_HARDWARE
-#COMMON_GLOBAL_CFLAGS                    += -DQCOM_ICS_COMPAT
 
 # Video
 TARGET_QCOM_LEGACY_OMX                  := true
-TARGET_QCOM_MEDIA_VARIANT               := legacy
-TARGET_ENABLE_QC_AV_ENHANCEMENTS        := true
 COMMON_GLOBAL_CFLAGS                    += -DQCOM_NO_SECURE_PLAYBACK
 
 # Camera
