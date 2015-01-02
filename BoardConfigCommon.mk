@@ -28,11 +28,12 @@ TARGET_NO_BOOTLOADER   := true
 TARGET_NO_RADIOIMAGE   := true
 COMMON_GLOBAL_CFLAGS   += -DTARGET_MSM7x27
 
+# Jemalloc fix
+COMMON_GLOBAL_CFLAGS   += -DJE_FORCE_SYNC_COMPARE_AND_SWAP_4
+MALLOC_IMPL            := dlmalloc
+
 # For assembly error
 #COMMON_GLOBAL_CFLAGS   += --save-temps
-
-# malloc implementation
-MALLOC_IMPL            := dlmalloc
 
 # Graphics
 USE_OPENGL_RENDERER                     := true
