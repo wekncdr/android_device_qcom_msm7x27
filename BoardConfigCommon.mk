@@ -15,7 +15,7 @@
 #
 
 # Target
-ARCH_ARM_HAVE_TLS_REGISTER := true
+ARCH_ARM_HAVE_TLS_REGISTER := false
 TARGET_ARCH            := arm
 TARGET_ARCH_LOWMEM     := true
 TARGET_ARCH_VARIANT    := armv6-vfp
@@ -56,13 +56,6 @@ COMMON_GLOBAL_CFLAGS                    += -DQCOM_NO_SECURE_PLAYBACK
 # Camera
 TARGET_DISABLE_ARM_PIE          := true
 BOARD_NEEDS_MEMORYHEAPPMEM      := true
-
-# Javascript, Browser and Webkit
-WITH_JIT                := true
-ENABLE_JSC_JIT          := true
-JS_ENGINE               := v8
-HTTP                    := chrome
-TARGET_FORCE_CPU_UPLOAD := true
 
 # Squisher
 TARGET_SYSTEMIMAGE_USE_SQUISHER := true

@@ -48,14 +48,6 @@ PRODUCT_PACKAGES += \
     libmm-omxcore \
     libOmxCore
 
-# WebKit
-PRODUCT_PACKAGES += \
-    libwebcore
-
-# Webkit (classic webview provider)
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.webview.provider=classic
-
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -67,6 +59,3 @@ PRODUCT_COPY_FILES += \
 
 # Inherit QCOM vendor
 $(call inherit-product, vendor/qcom/msm7x27/qcom-vendor.mk)
-
-# qcom-msm7x27 overlays
-DEVICE_PACKAGE_OVERLAYS += device/qcom/msm7x27/overlay
